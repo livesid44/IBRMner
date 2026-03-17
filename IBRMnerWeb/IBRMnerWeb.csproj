@@ -98,6 +98,13 @@
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="QuickLinks.aspx.cs">
+      <DependentUpon>QuickLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuickLinks.aspx.designer.cs">
+      <DependentUpon>QuickLinks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -114,6 +121,7 @@
     <Content Include="Error.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="QuickLinks.aspx" />
     <Content Include="Site.Master" />
     <None Include="Global.asax" />
   </ItemGroup>
