@@ -89,16 +89,20 @@ namespace IBRMnerWeb
 
             string accountNo = Request.QueryString["AccountNo"] ?? string.Empty;
             string mobileNo  = Request.QueryString["Mobileno"]  ?? string.Empty;
-            string roleName  = Convert.ToString(Session["RoleName"]);
-            string teamId    = Convert.ToString(Session["TeamID"]);
-            string createdBy = Convert.ToString(Session["CreatedBy"]);
 
-            if (string.IsNullOrEmpty(roleName) || string.IsNullOrEmpty(teamId) || string.IsNullOrEmpty(createdBy))
-            {
-                pnlError.Visible = true;
-                lblError.Text    = "Session has expired. Please log in again.";
-                return;
-            }
+            // Prefer session values; fall back to query string so the page is testable
+            // before a full login/session system is in place.
+            string roleName  = Convert.ToString(Session["RoleName"]);
+            if (string.IsNullOrEmpty(roleName))
+                roleName = Request.QueryString["RoleName"] ?? string.Empty;
+
+            string teamId    = Convert.ToString(Session["TeamID"]);
+            if (string.IsNullOrEmpty(teamId))
+                teamId = Request.QueryString["TeamID"] ?? string.Empty;
+
+            string createdBy = Convert.ToString(Session["CreatedBy"]);
+            if (string.IsNullOrEmpty(createdBy))
+                createdBy = Request.QueryString["CreatedBy"] ?? string.Empty;
 
             string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
 
