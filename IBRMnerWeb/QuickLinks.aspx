@@ -12,24 +12,23 @@
             <asp:Label ID="lblError" runat="server" />
         </asp:Panel>
 
+        <asp:Label ID="lblSuccess" runat="server" CssClass="quicklinks-success" Visible="false" />
+
         <asp:Panel ID="pnlNoData" runat="server" Visible="false">
             <p>No quick links are currently available.</p>
         </asp:Panel>
 
-        <asp:Repeater ID="rptQuickLinks" runat="server">
+        <asp:Repeater ID="rptQuickLinks" runat="server" OnItemCommand="rptQuickLinks_ItemCommand">
             <HeaderTemplate>
                 <ul class="quicklinks-list">
             </HeaderTemplate>
             <ItemTemplate>
                 <li class="quicklinks-item">
-                    <a href="#" class="quicklink"
-                       data-id='<%# Eval("id") %>'
-                       data-disposition1='<%# Server.HtmlEncode(Convert.ToString(Eval("Disposition1"))) %>'
-                       data-disposition2='<%# Server.HtmlEncode(Convert.ToString(Eval("Disposition2"))) %>'
-                       data-disposition3='<%# Server.HtmlEncode(Convert.ToString(Eval("Disposiution3"))) %>'
-                       data-comment='<%# Server.HtmlEncode(Convert.ToString(Eval("Comment"))) %>'>
-                        <%# Server.HtmlEncode(Convert.ToString(Eval("QuickLinktext"))) %>
-                    </a>
+                    <asp:LinkButton ID="lnkQuickLink" runat="server"
+                        CssClass="quicklink"
+                        CommandName="tag"
+                        CommandArgument='<%# BuildCommandArg(Eval("id"), Eval("Disposition1"), Eval("Disposition2"), Eval("Disposiution3"), Eval("Comment")) %>'
+                        Text='<%# Server.HtmlEncode(Convert.ToString(Eval("QuickLinktext"))) %>' />
                 </li>
             </ItemTemplate>
             <FooterTemplate>

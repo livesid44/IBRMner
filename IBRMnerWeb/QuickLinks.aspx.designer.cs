@@ -3,6 +3,7 @@ namespace IBRMnerWeb
 {
     public partial class QuickLinks
     {
+        protected global::System.Web.UI.WebControls.Label lblSuccess;
         protected global::System.Web.UI.WebControls.Panel pnlError;
         protected global::System.Web.UI.WebControls.Label lblError;
         protected global::System.Web.UI.WebControls.Panel pnlNoData;

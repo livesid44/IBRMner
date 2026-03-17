@@ -214,3 +214,13 @@ ul li {
     color: #c62828;
     margin-bottom: 16px;
 }
+
+.quicklinks-success {
+    display: block;
+    padding: 12px 16px;
+    background-color: #e6f4ea;
+    border-left: 4px solid #2e7d32;
+    border-radius: 3px;
+    color: #2e7d32;
+    margin-bottom: 16px;
+}
