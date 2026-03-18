@@ -105,6 +105,13 @@
     <Compile Include="QuickLinks.aspx.designer.cs">
       <DependentUpon>QuickLinks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SalesCRM.aspx.cs">
+      <DependentUpon>SalesCRM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SalesCRM.aspx.designer.cs">
+      <DependentUpon>SalesCRM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -122,8 +129,12 @@
     <Content Include="About.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="QuickLinks.aspx" />
+    <Content Include="SalesCRM.aspx" />
     <Content Include="Site.Master" />
     <None Include="Global.asax" />
+    <None Include="..\SQL\CreateTable_SalesCRMInteractions.sql" />
+    <None Include="..\SQL\CreateProc_usp_InsertSalesCRMInteraction.sql" />
+    <None Include="..\SQL\CreateProc_usp_GetCustomerDetails.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

@@ -220,3 +220,200 @@ ul li {
     color: #2e7d32;
     margin-bottom: 16px;
 }
+
+/* ── Sales CRM ─────────────────────────────────────────────────── */
+
+.crm-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.crm-section {
+    background: #fff;
+    border: 1px solid #dde5ef;
+    border-radius: 4px;
+    padding: 0 0 16px 0;
+}
+
+.crm-section-title {
+    margin: 0 0 14px 0;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #004080;
+    padding: 7px 14px;
+    border-radius: 3px 3px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Content padding inside each section */
+.crm-section > *:not(.crm-section-title) {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+/* CTI grid – 2 columns */
+.cti-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 24px;
+}
+
+.cti-field {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.cti-field-wide {
+    grid-column: 1 / -1;
+}
+
+.cti-label {
+    font-weight: 600;
+    color: #555;
+    min-width: 140px;
+    flex-shrink: 0;
+    font-size: 0.88em;
+}
+
+.cti-value {
+    color: #004080;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+/* Side-by-side layout */
+.crm-row {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.crm-section-grow {
+    flex: 1;
+    min-width: 0;
+}
+
+.crm-section-aside {
+    flex: 0 0 190px;
+    text-align: center;
+}
+
+/* Customer search row */
+.crm-search-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.crm-search-row .form-control {
+    flex: 1;
+    max-width: none;
+}
+
+/* Customer info result panel */
+.cust-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: #f0f5fc;
+    border-radius: 3px;
+}
+
+/* Data Capture form – 2-column grid */
+.crm-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 24px;
+}
+
+.crm-form-grid .form-group {
+    margin-bottom: 10px;
+}
+
+.crm-textarea {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* History / Additional Links */
+.crm-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.crm-link-list li {
+    margin-bottom: 6px;
+}
+
+.crm-link {
+    color: #004080;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.crm-link:hover {
+    color: #0066cc;
+}
+
+/* Action buttons bar */
+.crm-actions-bar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 14px;
+}
+
+/* Button variants */
+.btn-warning {
+    background-color: #e67e00;
+}
+
+.btn-warning:hover {
+    background-color: #cc6e00;
+}
+
+.btn-offers {
+    background-color: #2e7d32;
+}
+
+.btn-offers:hover {
+    background-color: #1b5e20;
+}
+
+.btn-transfer {
+    background-color: #6a1b9a;
+}
+
+.btn-transfer:hover {
+    background-color: #4a148c;
+}
+
+/* CRM inline alerts */
+.crm-alert {
+    padding: 10px 14px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.crm-alert-error {
+    background-color: #fdecea;
+    border-left: 4px solid #c62828;
+    color: #c62828;
+}
+
+.crm-alert-success {
+    background-color: #e6f4ea;
+    border-left: 4px solid #2e7d32;
+    color: #2e7d32;
+}

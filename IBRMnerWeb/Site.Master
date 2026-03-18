@@ -18,6 +18,7 @@
                     <li><asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" Text="Home" /></li>
                     <li><asp:HyperLink runat="server" NavigateUrl="~/About.aspx" Text="About" /></li>
                     <li><asp:HyperLink runat="server" NavigateUrl="~/QuickLinks.aspx" Text="Quick Links" /></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/SalesCRM.aspx"  Text="Sales CRM" /></li>
                     <li><asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx" Text="Contact" /></li>
                 </ul>
             </nav>
