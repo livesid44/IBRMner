@@ -1,0 +1,20 @@
+# Visual Studio artifacts
+.vs/
+*.user
+*.suo
+*.cache
+*.nupkg
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+*.log
+
+# ASP.NET
+App_Data/*.mdf
+App_Data/*.ldf
+
+# OS
+.DS_Store
+Thumbs.db

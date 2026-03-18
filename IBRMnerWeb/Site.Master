@@ -1,0 +1,35 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="IBRMnerWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - IBRMner</title>
+    <link rel="stylesheet" href="Content/Site.css" />
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <nav>
+                <a href="Default.aspx" class="nav-brand">IBRMner</a>
+                <ul class="nav-links">
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/Default.aspx" Text="Home" /></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/About.aspx" Text="About" /></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/QuickLinks.aspx" Text="Quick Links" /></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/SalesCRM.aspx"  Text="Sales CRM" /></li>
+                    <li><asp:HyperLink runat="server" NavigateUrl="~/Contact.aspx" Text="Contact" /></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </main>
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - IBRMner</p>
+        </footer>
+    </form>
+    <script src="Scripts/jquery-3.6.0.min.js"></script>
+</body>
+</html>
